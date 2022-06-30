@@ -307,9 +307,11 @@ p {
   font-weight: 700;
   line-height: 16px;
   text-align: center;
-  width: 370px;
+  width: 100%;
   height: 70px;
-  padding-top: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--add-font-color);
   text-transform: uppercase;
   background-color: rgba(47, 48, 58, 0.8);
@@ -380,7 +382,6 @@ p {
   color: var(--icon-color);
   width: 44px;
   height: 44px;
-  display: block;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -391,7 +392,6 @@ p {
 
 .team-icom {
   fill: currentColor;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-media-link:hover,
@@ -400,10 +400,6 @@ p {
   color: var(--add-font-color);
 }
 
-.team-icom:hover,
-.team-icom:focus {
-  fill: var(--add-font-color);
-}
 /*-----------------------------OUR CLIENTS-----------------------*/
 
 .clients-list {
@@ -522,7 +518,11 @@ p {
 .media-icon {
   fill: var(--add-font-color);
 }
-.footer-form {
+
+.subscribe {
+margin-left: 93px;
+}
+.subscribe-form {
   display: flex;
  width: 570px;
  height 86px;
@@ -538,6 +538,7 @@ p {
   width: 358px;
   height:50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--add-font-color);
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 border-radius: 4px;
 padding-left: 16px;
@@ -617,6 +618,7 @@ color: rgba(255, 255, 255, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-icon {
@@ -624,8 +626,13 @@ color: rgba(255, 255, 255, 0.6);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.btn-modal:focus, .btn-modal:hover{
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
 .btn-icon:focus, .btn-icon:hover {
-fill: var(--accent-color);
+fill: currentColor;
 }
 
 .modal-title{
@@ -803,6 +810,16 @@ border-radius: 4px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.projects-link:hover, .projects-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.projects-link:hover .text-info, 
+.projects-link:focus .text-info {
+   transform: translateY(0%);
+}
+
 .add-text {
   position: relative;
   overflow: hidden;
@@ -844,7 +861,7 @@ border-radius: 4px;
 }
 
 .projects-item:hover .text-info,
-.projects-item:focus .team-info {
+.projects-item:focus .text-info {
   transform: translateY(0%);
 }
 

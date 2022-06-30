@@ -364,23 +364,23 @@
             </li>
           </ul>
         </div>
-        <form class="footer-form">
-          <label for="email" class="email-news media-header"
-            >Подпишитесь на рассылку
-          </label>
-          <input
-            type="email"
-            id="email"
-            class="email-info"
-            placeholder="E-mail"
-          />
-          <button class="email-btn btn" type="submit">
-            Подписаться
-            <svg class="email-btn-icon" width="24" height="24">
-              <use href="./symbol-defs.svg#icon-icon-send"></use>
-            </svg>
-          </button>
-        </form>
+        <div class="email-accept">
+          <p class="subscribe media-header">Подпишитесь на рассылку</p>
+          <form class="subscribe-form">
+            <input
+              type="email"
+              class="email-info"
+              placeholder="E-mail"
+              required
+            />
+            <button class="email-btn btn" type="submit">
+              Подписаться
+              <svg class="email-btn-icon" width="24" height="24">
+                <use href="./symbol-defs.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
   </body>
